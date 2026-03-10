@@ -1,268 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vidal Reñao — IT Systems Administrator</title>
-
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
---bg:#f5f3ef;
---surface:#ffffff;
---border:#d6d1c8;
---ink:#1a1814;
---muted:#857d73;
---accent:#c0392b;
---accent2:#2563eb;
---accent3:#059669;
---tag-bg:#e8e4de;
-}
-
-body{
-background:var(--bg);
-font-family:'DM Sans',sans-serif;
-color:var(--ink);
-margin:0;
-}
-
-.container{
-max-width:960px;
-margin:auto;
-padding:40px 24px;
-}
-
-.hero-name{
-font-family:'Bebas Neue';
-font-size:90px;
-line-height:0.9;
-}
-
-.hero-name span{color:var(--accent)}
-
-.hero-role{
-font-family:'IBM Plex Mono';
-font-size:12px;
-color:var(--muted);
-margin-top:10px;
-}
-
-.section{
-margin-top:50px;
-}
-
-.section-title{
-font-family:'Bebas Neue';
-font-size:28px;
-margin-bottom:20px;
-}
-
-.projects-list{
-display:grid;
-gap:1px;
-background:var(--border);
-border:1px solid var(--border);
-}
-
-.project-row{
-display:grid;
-grid-template-columns:50px 1fr auto;
-gap:20px;
-background:white;
-padding:20px;
-}
-
-.project-num{
-font-family:'Bebas Neue';
-font-size:32px;
-color:var(--border);
-}
-
-.project-name{
-font-weight:600;
-font-size:16px;
-}
-
-.project-desc{
-font-size:13px;
-color:var(--muted);
-margin:8px 0;
-}
-
-.project-tags{
-display:flex;
-gap:6px;
-flex-wrap:wrap;
-}
-
-.tag{
-font-family:'IBM Plex Mono';
-font-size:9px;
-background:var(--tag-bg);
-padding:4px 8px;
-}
-
-.project-links{
-display:flex;
-flex-direction:column;
-gap:8px;
-}
-
-.project-link{
-font-family:'IBM Plex Mono';
-font-size:9px;
-border:1px solid currentColor;
-padding:6px 10px;
-text-decoration:none;
-color:var(--accent3);
-}
-
-.project-link.code{
-color:var(--accent2);
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidal Reñao — IT Systems Administrator</title>
+  <meta name="description" content="Professional profile of Vidal Reñao — IT Systems Administrator focused on Microsoft 365, infrastructure, networking and automation." />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <div class="container">
+    <header class="topbar">
+      <span class="topbar-left" data-i18n="topbar.role">IT Systems Administrator · Profile</span>
 
-<div class="container">
+      <div class="topbar-right">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+        <span class="status-pill">
+          <span class="status-dot"></span>
+          <span data-i18n="topbar.status">Open to opportunities</span>
+        </span>
+      </div>
+    </header>
 
-<h1 class="hero-name">VIDAL<br><span>REÑAO</span></h1>
+    <section class="hero">
+      <div>
+        <h1 class="hero-name">VIDAL<br><span>REÑAO</span></h1>
+        <div class="hero-role">
+          <span data-i18n="hero.role1">Microsoft 365 & Identity Management</span><br>
+          <span data-i18n="hero.role2">Infrastructure · Networking · Automation</span>
+        </div>
+        <p class="hero-summary" data-i18n="hero.summary">
+          IT Systems Administrator with hands-on experience in Microsoft 365, Windows Server,
+          Active Directory, networking and Linux environments. Focused on building practical
+          projects and lab environments that reflect real business and enterprise scenarios.
+        </p>
+      </div>
 
-<div class="hero-role">
-Microsoft 365 & Identity Management<br>
-Infrastructure · Networking · Automation
-</div>
+      <div class="hero-right">
+        <div class="cert-box">
+          <div class="cert-label" data-i18n="hero.certLabel">Certified</div>
+          <div class="cert-title">CCNA</div>
+        </div>
+        <div class="hero-links">
+          <a class="hero-link" href="https://www.linkedin.com/in/vidalrenao" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="hero-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer" data-i18n="hero.websiteDemos">Website Demos</a>
+          <a class="hero-link" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-<section class="section">
+    <section class="quick-cards">
+      <div class="quick-card">
+        <span class="mini-label" data-i18n="quick.focusLabel">Current Focus</span>
+        <p data-i18n="quick.focusText">Modern Workplace, Microsoft 365 automation, hybrid infrastructure and hands-on lab projects.</p>
+      </div>
+      <div class="quick-card">
+        <span class="mini-label" data-i18n="quick.strengthsLabel">Core Strengths</span>
+        <p data-i18n="quick.strengthsText">Identity management, system administration, networking fundamentals and practical troubleshooting.</p>
+      </div>
+      <div class="quick-card">
+        <span class="mini-label" data-i18n="quick.portfolioLabel">Portfolio</span>
+        <div class="mini-links">
+          <a class="mini-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer" data-i18n="quick.liveDemos">Live demos</a>
+          <a class="mini-link" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer" data-i18n="quick.repositories">Repositories</a>
+        </div>
+      </div>
+    </section>
 
-<h2 class="section-title">Featured Projects</h2>
+    <div class="divider"></div>
 
-<div class="projects-list">
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title" data-i18n="stack.title">Tech Stack</h2>
+      </div>
+      <p class="section-intro" data-i18n="stack.intro">
+        Main tools and technologies used across Microsoft 365, cloud-connected environments,
+        infrastructure administration, networking and automation.
+      </p>
+      <div class="stack-grid">
+        <div class="stack-cell">
+          <div class="stack-cell-title">Microsoft 365</div>
+          <div class="stack-items">
+            <span class="stack-item">Microsoft 365</span>
+            <span class="stack-item">Entra ID</span>
+            <span class="stack-item">Intune</span>
+            <span class="stack-item">Microsoft Graph API</span>
+          </div>
+        </div>
+        <div class="stack-cell">
+          <div class="stack-cell-title" data-i18n="stack.infrastructure">Infrastructure</div>
+          <div class="stack-items">
+            <span class="stack-item">Windows Server</span>
+            <span class="stack-item">Active Directory</span>
+            <span class="stack-item">DNS / DHCP</span>
+            <span class="stack-item">Azure Arc</span>
+          </div>
+        </div>
+        <div class="stack-cell">
+          <div class="stack-cell-title" data-i18n="stack.networking">Networking</div>
+          <div class="stack-items">
+            <span class="stack-item">Cisco / CCNA</span>
+            <span class="stack-item">VPN</span>
+            <span class="stack-item">Firewall / nftables</span>
+            <span class="stack-item">TCP/IP Troubleshooting</span>
+          </div>
+        </div>
+        <div class="stack-cell">
+          <div class="stack-cell-title" data-i18n="stack.automation">Automation</div>
+          <div class="stack-items">
+            <span class="stack-item">PowerShell</span>
+            <span class="stack-item">GitHub Actions</span>
+            <span class="stack-item">Linux (Debian / Ubuntu)</span>
+            <span class="stack-item">CSV-based workflows</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Graph Dashboard -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
+      </div>
+      <p class="section-intro" data-i18n="projects.intro">
+        Selected projects that demonstrate practical work in Microsoft 365, automation,
+        small business solutions and enterprise-style infrastructure.
+      </p>
 
-<div class="project-row">
-<div class="project-num">01</div>
+      <div class="projects-list">
+        <article class="project-row">
+          <div class="project-num">01</div>
+          <div>
+            <div class="project-name" data-i18n="projects.graph.title">Microsoft 365 Graph Dashboard</div>
+            <div class="project-desc" data-i18n="projects.graph.desc">
+              Web dashboard demonstrating Microsoft Graph API integration with OAuth authentication,
+              access to Microsoft 365 data and multi-language support.
+            </div>
+            <div class="project-tags">
+              <span class="tag blue">Graph API</span>
+              <span class="tag blue">OAuth / MSAL</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag" data-i18n="projects.graph.tag4">Multi-language</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao/m365-graph-dashboard" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
+          </div>
+        </article>
 
-<div>
-<div class="project-name">Microsoft 365 Graph Dashboard</div>
+        <article class="project-row">
+          <div class="project-num">02</div>
+          <div>
+            <div class="project-name" data-i18n="projects.lifecycle.title">Employee Lifecycle Automation</div>
+            <div class="project-desc" data-i18n="projects.lifecycle.desc">
+              PowerShell automation simulating enterprise onboarding and offboarding,
+              including CSV import, secure offboarding, session revocation, logging and CI/CD.
+            </div>
+            <div class="project-tags">
+              <span class="tag red">PowerShell</span>
+              <span class="tag red">GitHub Actions</span>
+              <span class="tag" data-i18n="projects.lifecycle.tag3">Bulk CSV</span>
+              <span class="tag" data-i18n="projects.lifecycle.tag4">Logging</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao/graph-employee-onboarding" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
+          </div>
+        </article>
 
-<div class="project-desc">
-Web dashboard demonstrating Microsoft Graph API integration with OAuth authentication and access to Microsoft 365 services.
-</div>
+        <article class="project-row">
+          <div class="project-num">03</div>
+          <div>
+            <div class="project-name" data-i18n="projects.website.title">SME Website Demo Platform</div>
+            <div class="project-desc" data-i18n="projects.website.desc">
+              Demo websites for local businesses and SMEs, built to show how simple digital solutions
+              can improve visibility, trust and customer contact.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">SMEs / KMU</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao/website-demos" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
+            <a class="project-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer" data-i18n="common.live">Live ↗</a>
+          </div>
+        </article>
 
-<div class="project-tags">
-<span class="tag">Graph API</span>
-<span class="tag">MSAL</span>
-<span class="tag">Microsoft 365</span>
-</div>
-</div>
+        <article class="project-row">
+          <div class="project-num">04</div>
+          <div>
+            <div class="project-name" data-i18n="projects.lab.title">Enterprise Infrastructure Lab</div>
+            <div class="project-desc" data-i18n="projects.lab.desc">
+              Hands-on lab simulating a corporate network with a Debian router and firewall,
+              Windows Server roles, Active Directory, DNS, DHCP, GPOs and domain-joined clients.
+            </div>
+            <div class="project-tags">
+              <span class="tag green">Active Directory</span>
+              <span class="tag green">Debian Router</span>
+              <span class="tag green">nftables</span>
+              <span class="tag">Windows Server</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao/m365-enterprise-lab" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<div class="project-links">
-<a class="project-link code"
-href="https://github.com/vidal-renao/m365-graph-dashboard"
-target="_blank">
-Code ↗
-</a>
-</div>
-</div>
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title" data-i18n="lab.title">Infrastructure Lab</h2>
+      </div>
+      <div class="lab-box">
+        <p class="section-intro" style="margin-bottom:0;" data-i18n="lab.intro">
+          Practical enterprise-style lab environment designed to strengthen system administration,
+          network control and Windows infrastructure skills in a realistic setup.
+        </p>
+        <div class="lab-grid">
+          <div class="lab-card">
+            <h3 data-i18n="lab.router.title">Debian Router / Firewall</h3>
+            <ul>
+              <li data-i18n="lab.router.1">NAT configuration for internet access</li>
+              <li data-i18n="lab.router.2">IP forwarding enabled</li>
+              <li data-i18n="lab.router.3">Restricted traffic with nftables</li>
+              <li data-i18n="lab.router.4">Logging and counters for verification</li>
+            </ul>
+          </div>
+          <div class="lab-card">
+            <h3 data-i18n="lab.server.title">Windows Server</h3>
+            <ul>
+              <li data-i18n="lab.server.1">AD DS deployment</li>
+              <li data-i18n="lab.server.2">DNS and DHCP configuration</li>
+              <li data-i18n="lab.server.3">Organizational Units and groups</li>
+              <li data-i18n="lab.server.4">Group Policy management</li>
+            </ul>
+          </div>
+          <div class="lab-card">
+            <h3 data-i18n="lab.clients.title">Windows Clients</h3>
+            <ul>
+              <li data-i18n="lab.clients.1">Domain join operations</li>
+              <li data-i18n="lab.clients.2">Policy application tests</li>
+              <li data-i18n="lab.clients.3">Controlled internet access</li>
+              <li data-i18n="lab.clients.4">Client-side validation and troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Employee Lifecycle -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title" data-i18n="architecture.title">Architecture</h2>
+      </div>
+      <div class="architecture-box">
+        <div class="architecture-title" data-i18n="architecture.subtitle">Lab flow</div>
+        <pre class="architecture-diagram" data-i18n="architecture.diagram">Internet
+   ↓
+Debian Router / Firewall
+(NAT + nftables + IP forwarding)
+   ↓
+LAN 192.168.50.0/24
+   ↓
+Windows Server 2025
+(AD DS + DNS + DHCP + GPO)
+   ↓
+Windows 11 Clients
+(Domain joined + policy managed)</pre>
+      </div>
+    </section>
 
-<div class="project-row">
-<div class="project-num">02</div>
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title" data-i18n="focus.title">Focus & Learning</h2>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-row">
+          <div class="timeline-label" data-i18n="focus.currentLabel">Current Direction</div>
+          <div class="timeline-text" data-i18n="focus.currentText">Building stronger skills in Microsoft 365 administration, identity management, hybrid infrastructure and enterprise-style automation.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-label" data-i18n="focus.learningLabel">Learning Areas</div>
+          <div class="timeline-text" data-i18n="focus.learningText">Cloud-connected infrastructure, Microsoft 365 automation, access management, security fundamentals and operational workflows for modern IT environments.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-label" data-i18n="focus.styleLabel">Working Style</div>
+          <div class="timeline-text" data-i18n="focus.styleText">Hands-on, practical and project-driven. I prefer building, testing and documenting solutions that reflect realistic support and infrastructure scenarios.</div>
+        </div>
+      </div>
+    </section>
 
-<div>
-<div class="project-name">Employee Lifecycle Automation</div>
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title" data-i18n="learning.title">Currently Learning</h2>
+      </div>
+      <div class="learning-grid">
+        <div class="learning-cell" data-i18n="learning.1">Cloud infrastructure and hybrid environments</div>
+        <div class="learning-cell" data-i18n="learning.2">Identity and access management</div>
+        <div class="learning-cell" data-i18n="learning.3">Microsoft 365 automation</div>
+        <div class="learning-cell" data-i18n="learning.4">Infrastructure security and operations</div>
+      </div>
+    </section>
 
-<div class="project-desc">
-PowerShell automation simulating enterprise onboarding and offboarding processes using CSV import and secure session management.
-</div>
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cell">
+          <a href="https://www.linkedin.com/in/vidalrenao" target="_blank" rel="noreferrer">linkedin.com/in/vidalrenao</a>
+        </div>
+        <div class="contact-cell">
+          <a href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">github.com/vidal-renao</a>
+        </div>
+        <div class="contact-cell">
+          <a href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer">vidal-renao.github.io/website-demos</a>
+        </div>
+      </div>
+    </section>
 
-<div class="project-tags">
-<span class="tag">PowerShell</span>
-<span class="tag">Automation</span>
-<span class="tag">CI/CD</span>
-</div>
-</div>
+    <section class="section">
+      <div class="note-box">
+        <div class="note-title" data-i18n="note.title">Professional note</div>
+        <p data-i18n="note.text">
+          This page is meant as a concise technical profile. It complements the GitHub profile README,
+          project repositories and live demos, giving recruiters and employers a quick overview of my
+          practical focus in Microsoft 365, infrastructure, networking and automation.
+        </p>
+      </div>
+    </section>
 
-<div class="project-links">
-<a class="project-link code"
-href="https://github.com/vidal-renao/graph-employee-onboarding"
-target="_blank">
-Code ↗
-</a>
-</div>
-</div>
+    <footer class="footer">
+      <span class="footer-mono" data-i18n="footer.left">Vidal Reñao · IT Systems Administrator</span>
+      <span class="footer-mono" data-i18n="footer.right">Microsoft 365 · Infrastructure · Networking</span>
+    </footer>
+  </div>
 
-<!-- Website demos -->
-
-<div class="project-row">
-<div class="project-num">03</div>
-
-<div>
-<div class="project-name">SME Website Demo Platform</div>
-
-<div class="project-desc">
-Collection of demo websites designed for small businesses and local services.
-</div>
-
-<div class="project-tags">
-<span class="tag">Frontend</span>
-<span class="tag">GitHub Pages</span>
-</div>
-</div>
-
-<div class="project-links">
-<a class="project-link code"
-href="https://github.com/vidal-renao/website-demos"
-target="_blank">
-Code ↗
-</a>
-
-<a class="project-link"
-href="https://vidal-renao.github.io/website-demos/"
-target="_blank">
-Live ↗
-</a>
-</div>
-</div>
-
-<!-- Enterprise Lab -->
-
-<div class="project-row">
-<div class="project-num">04</div>
-
-<div>
-<div class="project-name">Enterprise Infrastructure Lab</div>
-
-<div class="project-desc">
-Hands-on corporate network simulation with Debian router, nftables firewall, Windows Server with Active Directory, DNS, DHCP and domain-joined clients.
-</div>
-
-<div class="project-tags">
-<span class="tag">Active Directory</span>
-<span class="tag">Debian</span>
-<span class="tag">Networking</span>
-</div>
-</div>
-
-<div class="project-links">
-<a class="project-link code"
-href="https://github.com/vidal-renao/m365-enterprise-lab"
-target="_blank">
-Code ↗
-</a>
-</div>
-</div>
-
-</div>
-
-</section>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
