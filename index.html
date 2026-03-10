@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vidal Reñao — IT Systems Administrator</title>
+  <meta name="description" content="Professional profile of Vidal Reñao — IT Systems Administrator focused on Microsoft 365, infrastructure, networking and automation." />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f3ef;
+      --surface: #ffffff;
+      --surface-2: #f0ece6;
+      --border: #d6d1c8;
+      --ink: #1a1814;
+      --ink-2: #3d3a35;
+      --muted: #857d73;
+      --accent: #c0392b;
+      --accent-2: #2563eb;
+      --accent-3: #059669;
+      --tag-bg: #e8e4de;
+      --shadow: 0 10px 24px rgba(26, 24, 20, 0.04);
+      --max: 960px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 44px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--ink);
+      flex-wrap: wrap;
+    }
+
+    .topbar-left,
+    .status-pill,
+    .mini-label,
+    .mini-link,
+    .pill,
+    .project-link,
+    .footer-mono,
+    .section-num,
+    .stack-cell-title,
+    .architecture-title,
+    .timeline-label {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .topbar-left {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10px;
+      color: var(--accent-3);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-3);
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .hero-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(70px, 12vw, 122px);
+      line-height: 0.88;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-name span { color: var(--accent); }
+
+    .hero-role {
+      margin-top: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+    }
+
+    .hero-summary {
+      margin-top: 18px;
+      max-width: 560px;
+      font-size: 15px;
+      color: var(--ink-2);
+    }
+
+    .hero-right {
+      display: grid;
+      gap: 12px;
+      justify-items: end;
+    }
+
+    .cert-box {
+      background: var(--ink);
+      color: var(--bg);
+      border: 2px solid var(--ink);
+      padding: 14px 18px;
+      min-width: 148px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cert-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.65;
+      margin-bottom: 4px;
+    }
+
+    .cert-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      letter-spacing: 0.06em;
+      color: #f0e080;
+    }
+
+    .hero-links,
+    .mini-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .hero-link,
+    .mini-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      transition: color 0.18s ease;
+    }
+
+    .hero-link::before,
+    .mini-link::before {
+      content: '↗';
+      font-size: 11px;
+    }
+
+    .hero-link:hover,
+    .mini-link:hover {
+      color: var(--accent-2);
+    }
+
+    .quick-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-bottom: 48px;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card {
+      background: var(--surface);
+      padding: 18px 18px 20px;
+    }
+
+    .mini-label {
+      font-size: 9px;
+      color: var(--accent);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .quick-card p {
+      font-size: 13px;
+      color: var(--ink-2);
+    }
+
+    .divider {
+      height: 2px;
+      background: var(--ink);
+      margin-bottom: 34px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-num {
+      font-size: 10px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      font-size: 14px;
+      color: var(--ink-2);
+      margin-bottom: 18px;
+    }
+
+    .stack-grid,
+    .learning-grid,
+    .contact-grid,
+    .timeline-grid {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .stack-grid { grid-template-columns: repeat(4, 1fr); }
+    .learning-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: repeat(3, 1fr); }
+    .timeline-grid { grid-template-columns: 1fr; }
+
+    .stack-cell,
+    .learning-cell,
+    .contact-cell,
+    .timeline-row {
+      background: var(--surface);
+    }
+
+    .stack-cell {
+      padding: 16px;
+    }
+
+    .stack-cell-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stack-items {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stack-item {
+      font-size: 12.5px;
+      color: var(--ink-2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stack-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .projects-list {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 52px 1fr auto;
+      gap: 18px;
+      background: var(--surface);
+      padding: 22px 20px;
+      align-items: start;
+    }
+
+    .project-row:hover { background: #faf9f6; }
+
+    .project-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      color: var(--border);
+      user-select: none;
+      padding-top: 2px;
+    }
+
+    .project-name {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 12px;
+      max-width: 560px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: 2px;
+      background: var(--tag-bg);
+      color: var(--ink-2);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .tag.red { background: rgba(192,57,43,0.1); color: var(--accent); }
+    .tag.blue { background: rgba(37,99,235,0.1); color: var(--accent-2); }
+    .tag.green { background: rgba(5,150,105,0.1); color: var(--accent-3); }
+
+    .project-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: center;
+      min-width: 98px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-decoration: none;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border: 1px solid currentColor;
+      color: var(--accent-3);
+      white-space: nowrap;
+      transition: all 0.18s ease;
+    }
+
+    .project-link:hover {
+      background: var(--accent-3);
+      color: #fff;
+    }
+
+    .project-link.code {
+      color: var(--accent-2);
+    }
+
+    .project-link.code:hover {
+      background: var(--accent-2);
+      color: #fff;
+    }
+
+    .lab-box,
+    .architecture-box,
+    .note-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .lab-box {
+      padding: 20px;
+    }
+
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 18px;
+    }
+
+    .lab-card {
+      background: var(--surface-2);
+      padding: 16px;
+    }
+
+    .lab-card h3 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .lab-card ul {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+
+    .lab-card li {
+      font-size: 12.5px;
+      color: var(--ink-2);
+      display: flex;
+      gap: 8px;
+    }
+
+    .lab-card li::before {
+      content: '•';
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .architecture-box {
+      padding: 22px;
+    }
+
+    .architecture-title {
+      font-size: 10px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .architecture-diagram {
+      background: var(--ink);
+      color: #f7f5f0;
+      padding: 18px;
+      overflow-x: auto;
+      border-radius: 2px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      padding: 16px 18px;
+      align-items: start;
+    }
+
+    .timeline-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      font-weight: 700;
+      padding-top: 2px;
+    }
+
+    .timeline-text {
+      font-size: 13px;
+      color: var(--ink-2);
+    }
+
+    .learning-cell,
+    .contact-cell {
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--ink-2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .learning-cell::before,
+    .contact-cell::before {
+      color: var(--accent-2);
+      font-family: 'IBM Plex Mono', monospace;
+      flex-shrink: 0;
+    }
+
+    .learning-cell::before { content: '→'; }
+    .contact-cell::before { content: '↗'; }
+
+    .contact-cell a {
+      text-decoration: none;
+      color: inherit;
+      word-break: break-word;
+    }
+
+    .note-box {
+      padding: 18px 20px;
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .note-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f0e080;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .note-box p {
+      font-size: 13px;
+      color: rgba(245,243,239,0.82);
+      max-width: 720px;
+    }
+
+    .footer {
+      margin-top: 56px;
+      padding-top: 16px;
+      border-top: 2px solid var(--ink);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-mono {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      .stack-grid,
+      .contact-grid,
+      .lab-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 720px) {
+      .hero,
+      .project-row,
+      .timeline-row { grid-template-columns: 1fr; }
+
+      .hero-right,
+      .hero-links,
+      .mini-links,
+      .project-links { justify-items: start; align-items: flex-start; }
+
+      .quick-cards,
+      .stack-grid,
+      .learning-grid,
+      .contact-grid,
+      .lab-grid { grid-template-columns: 1fr; }
+
+      .project-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <span class="topbar-left">IT Systems Administrator · Profile</span>
+      <span class="status-pill"><span class="status-dot"></span>Open to opportunities</span>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1 class="hero-name">VIDAL<br><span>REÑAO</span></h1>
+        <div class="hero-role">
+          Microsoft 365 &amp; Identity Management<br>
+          Infrastructure · Networking · Automation
+        </div>
+        <p class="hero-summary">
+          IT Systems Administrator with hands-on experience in Microsoft 365, Windows Server,
+          Active Directory, networking and Linux environments. Focused on building practical
+          projects and lab environments that reflect real business and enterprise scenarios.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="cert-box">
+          <div class="cert-label">Certified</div>
+          <div class="cert-title">CCNA</div>
+        </div>
+        <div class="hero-links">
+          <a class="hero-link" href="https://www.linkedin.com/in/vidalrenao" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="hero-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer">Website Demos</a>
+          <a class="hero-link" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-cards">
+      <div class="quick-card">
+        <span class="mini-label">Current Focus</span>
+        <p>Modern Workplace, Microsoft 365 automation, hybrid infrastructure and hands-on lab projects.</p>
+      </div>
+      <div class="quick-card">
+        <span class="mini-label">Core Strengths</span>
+        <p>Identity management, system administration, networking fundamentals and practical troubleshooting.</p>
+      </div>
+      <div class="quick-card">
+        <span class="mini-label">Portfolio</span>
+        <div class="mini-links">
+          <a class="mini-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer">Live demos</a>
+          <a class="mini-link" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">Repositories</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+      <p class="section-intro">
+        Main tools and technologies used across Microsoft 365, cloud-connected environments,
+        infrastructure administration, networking and automation.
+      </p>
+      <div class="stack-grid">
+        <div class="stack-cell">
+          <div class="stack-cell-title">Microsoft 365</div>
+          <div class="stack-items">
+            <span class="stack-item">Microsoft 365</span>
+            <span class="stack-item">Entra ID</span>
+            <span class="stack-item">Intune</span>
+            <span class="stack-item">Microsoft Graph API</span>
+          </div>
+        </div>
+        <div class="stack-cell">
+          <div class="stack-cell-title">Infrastructure</div>
+          <div class="stack-items">
+            <span class="stack-item">Windows Server</span>
+            <span class="stack-item">Active Directory</span>
+            <span class="stack-item">DNS / DHCP</span>
+            <span class="stack-item">Azure Arc</span>
+          </div>
+        </div>
+        <div class="stack-cell">
+          <div class="stack-cell-title">Networking</div>
+          <div class="stack-items">
+            <span class="stack-item">Cisco / CCNA</span>
+            <span class="stack-item">VPN</span>
+            <span class="stack-item">Firewall / nftables</span>
+            <span class="stack-item">TCP/IP Troubleshooting</span>
+          </div>
+        </div>
+        <div class="stack-cell">
+          <div class="stack-cell-title">Automation</div>
+          <div class="stack-items">
+            <span class="stack-item">PowerShell</span>
+            <span class="stack-item">GitHub Actions</span>
+            <span class="stack-item">Linux (Debian / Ubuntu)</span>
+            <span class="stack-item">CSV-based workflows</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <p class="section-intro">
+        Selected projects that demonstrate practical work in Microsoft 365, automation,
+        small business solutions and enterprise-style infrastructure.
+      </p>
+
+      <div class="projects-list">
+        <article class="project-row">
+          <div class="project-num">01</div>
+          <div>
+            <div class="project-name">Microsoft 365 Graph Dashboard</div>
+            <div class="project-desc">
+              Web dashboard demonstrating Microsoft Graph API integration with OAuth authentication,
+              access to Microsoft 365 data and multi-language support.
+            </div>
+            <div class="project-tags">
+              <span class="tag blue">Graph API</span>
+              <span class="tag blue">OAuth / MSAL</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Multi-language</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">Code ↗</a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <div class="project-num">02</div>
+          <div>
+            <div class="project-name">Employee Lifecycle Automation</div>
+            <div class="project-desc">
+              PowerShell automation simulating enterprise onboarding and offboarding,
+              including CSV import, secure offboarding, session revocation, logging and CI/CD.
+            </div>
+            <div class="project-tags">
+              <span class="tag red">PowerShell</span>
+              <span class="tag red">GitHub Actions</span>
+              <span class="tag">Bulk CSV</span>
+              <span class="tag">Logging</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">Code ↗</a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <div class="project-num">03</div>
+          <div>
+            <div class="project-name">SME Website Demo Platform</div>
+            <div class="project-desc">
+              Demo websites for local businesses and SMEs, built to show how simple digital solutions
+              can improve visibility, trust and customer contact.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">SMEs / KMU</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao/website-demos" target="_blank" rel="noreferrer">Code ↗</a>
+            <a class="project-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer">Live ↗</a>
+          </div>
+        </article>
+
+        <article class="project-row">
+          <div class="project-num">04</div>
+          <div>
+            <div class="project-name">Enterprise Infrastructure Lab</div>
+            <div class="project-desc">
+              Hands-on lab simulating a corporate network with a Debian router and firewall,
+              Windows Server roles, Active Directory, DNS, DHCP, GPOs and domain-joined clients.
+            </div>
+            <div class="project-tags">
+              <span class="tag green">Active Directory</span>
+              <span class="tag green">Debian Router</span>
+              <span class="tag green">nftables</span>
+              <span class="tag">Windows Server</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a class="project-link code" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">Code ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Infrastructure Lab</h2>
+      </div>
+      <div class="lab-box">
+        <p class="section-intro" style="margin-bottom:0;">
+          Practical enterprise-style lab environment designed to strengthen system administration,
+          network control and Windows infrastructure skills in a realistic setup.
+        </p>
+        <div class="lab-grid">
+          <div class="lab-card">
+            <h3>Debian Router / Firewall</h3>
+            <ul>
+              <li>NAT configuration for internet access</li>
+              <li>IP forwarding enabled</li>
+              <li>Restricted traffic with nftables</li>
+              <li>Logging and counters for verification</li>
+            </ul>
+          </div>
+          <div class="lab-card">
+            <h3>Windows Server</h3>
+            <ul>
+              <li>AD DS deployment</li>
+              <li>DNS and DHCP configuration</li>
+              <li>Organizational Units and groups</li>
+              <li>Group Policy management</li>
+            </ul>
+          </div>
+          <div class="lab-card">
+            <h3>Windows Clients</h3>
+            <ul>
+              <li>Domain join operations</li>
+              <li>Policy application tests</li>
+              <li>Controlled internet access</li>
+              <li>Client-side validation and troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Architecture</h2>
+      </div>
+      <div class="architecture-box">
+        <div class="architecture-title">Lab flow</div>
+        <pre class="architecture-diagram">Internet
+   ↓
+Debian Router / Firewall
+(NAT + nftables + IP forwarding)
+   ↓
+LAN 192.168.50.0/24
+   ↓
+Windows Server 2025
+(AD DS + DNS + DHCP + GPO)
+   ↓
+Windows 11 Clients
+(Domain joined + policy managed)</pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Focus & Learning</h2>
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-row">
+          <div class="timeline-label">Current Direction</div>
+          <div class="timeline-text">Building stronger skills in Microsoft 365 administration, identity management, hybrid infrastructure and enterprise-style automation.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-label">Learning Areas</div>
+          <div class="timeline-text">Cloud-connected infrastructure, Microsoft 365 automation, access management, security fundamentals and operational workflows for modern IT environments.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-label">Working Style</div>
+          <div class="timeline-text">Hands-on, practical and project-driven. I prefer building, testing and documenting solutions that reflect realistic support and infrastructure scenarios.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Currently Learning</h2>
+      </div>
+      <div class="learning-grid">
+        <div class="learning-cell">Cloud infrastructure and hybrid environments</div>
+        <div class="learning-cell">Identity and access management</div>
+        <div class="learning-cell">Microsoft 365 automation</div>
+        <div class="learning-cell">Infrastructure security and operations</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-cell">
+          <a href="https://www.linkedin.com/in/vidalrenao" target="_blank" rel="noreferrer">linkedin.com/in/vidalrenao</a>
+        </div>
+        <div class="contact-cell">
+          <a href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">github.com/vidal-renao</a>
+        </div>
+        <div class="contact-cell">
+          <a href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer">vidal-renao.github.io/website-demos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="note-box">
+        <div class="note-title">Professional note</div>
+        <p>
+          This page is meant as a concise technical profile. It complements the GitHub profile README,
+          project repositories and live demos, giving recruiters and employers a quick overview of my
+          practical focus in Microsoft 365, infrastructure, networking and automation.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-mono">Vidal Reñao · IT Systems Administrator</span>
+      <span class="footer-mono">Microsoft 365 · Infrastructure · Networking</span>
+    </footer>
+  </div>
+</body>
+</html>
