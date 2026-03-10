@@ -1,5 +1,9 @@
 const translations = {
   en: {
+    meta: {
+      title: "Vidal Reñao — IT Systems Administrator",
+      description: "Professional profile of Vidal Reñao — IT Systems Administrator focused on Microsoft 365, infrastructure, networking and automation."
+    },
     topbar: {
       role: "IT Systems Administrator · Profile",
       status: "Open to opportunities"
@@ -9,7 +13,10 @@ const translations = {
       role2: "Infrastructure · Networking · Automation",
       summary: "IT Systems Administrator with hands-on experience in Microsoft 365, Windows Server, Active Directory, networking and Linux environments. Focused on building practical projects and lab environments that reflect real business and enterprise scenarios.",
       certLabel: "Certified",
-      websiteDemos: "Website Demos"
+      websiteDemos: "Website Demos",
+      ctaLinkedIn: "View LinkedIn",
+      ctaGitHub: "View GitHub",
+      ctaCV: "Download CV"
     },
     quick: {
       focusLabel: "Current Focus",
@@ -30,6 +37,11 @@ const translations = {
     projects: {
       title: "Featured Projects",
       intro: "Selected projects that demonstrate practical work in Microsoft 365, automation, small business solutions and enterprise-style infrastructure.",
+      status: {
+        code: "Code",
+        live: "Live",
+        lab: "Lab"
+      },
       graph: {
         title: "Microsoft 365 Graph Dashboard",
         desc: "Web dashboard demonstrating Microsoft Graph API integration with OAuth authentication, access to Microsoft 365 data and multi-language support.",
@@ -107,6 +119,12 @@ Windows 11 Clients
       3: "Microsoft 365 automation",
       4: "Infrastructure security and operations"
     },
+    languages: {
+      title: "Languages",
+      es: { name: "Spanish", level: "Native" },
+      en: { name: "English", level: "C1 Professional" },
+      de: { name: "German", level: "B2 in training" }
+    },
     contact: {
       title: "Contact"
     },
@@ -120,11 +138,16 @@ Windows 11 Clients
     },
     common: {
       code: "Code ↗",
-      live: "Live ↗"
+      live: "Live ↗",
+      contactBtn: "Contact"
     }
   },
 
   es: {
+    meta: {
+      title: "Vidal Reñao — Administrador de Sistemas IT",
+      description: "Perfil profesional de Vidal Reñao — Administrador de Sistemas IT enfocado en Microsoft 365, infraestructura, redes y automatización."
+    },
     topbar: {
       role: "Administrador de Sistemas IT · Perfil",
       status: "Abierto a oportunidades"
@@ -134,7 +157,10 @@ Windows 11 Clients
       role2: "Infraestructura · Redes · Automatización",
       summary: "Administrador de Sistemas IT con experiencia práctica en Microsoft 365, Windows Server, Active Directory, redes y entornos Linux. Enfocado en construir proyectos prácticos y laboratorios que reflejan escenarios reales empresariales y de infraestructura.",
       certLabel: "Certificado",
-      websiteDemos: "Demos Web"
+      websiteDemos: "Demos Web",
+      ctaLinkedIn: "Ver LinkedIn",
+      ctaGitHub: "Ver GitHub",
+      ctaCV: "Descargar CV"
     },
     quick: {
       focusLabel: "Enfoque Actual",
@@ -155,6 +181,11 @@ Windows 11 Clients
     projects: {
       title: "Proyectos Destacados",
       intro: "Proyectos seleccionados que muestran trabajo práctico en Microsoft 365, automatización, soluciones para pequeñas empresas e infraestructura de estilo empresarial.",
+      status: {
+        code: "Código",
+        live: "Demo",
+        lab: "Lab"
+      },
       graph: {
         title: "Microsoft 365 Graph Dashboard",
         desc: "Dashboard web que demuestra integración con Microsoft Graph API mediante autenticación OAuth, acceso a datos de Microsoft 365 y soporte multidioma.",
@@ -232,6 +263,12 @@ Clientes Windows 11
       3: "Automatización de Microsoft 365",
       4: "Seguridad y operaciones de infraestructura"
     },
+    languages: {
+      title: "Idiomas",
+      es: { name: "Español", level: "Nativo" },
+      en: { name: "Inglés", level: "C1 Profesional" },
+      de: { name: "Alemán", level: "B2 en formación" }
+    },
     contact: {
       title: "Contacto"
     },
@@ -245,11 +282,16 @@ Clientes Windows 11
     },
     common: {
       code: "Código ↗",
-      live: "Demo ↗"
+      live: "Demo ↗",
+      contactBtn: "Contacto"
     }
   },
 
   de: {
+    meta: {
+      title: "Vidal Reñao — IT-Systemadministrator",
+      description: "Berufliches Profil von Vidal Reñao — IT-Systemadministrator mit Fokus auf Microsoft 365, Infrastruktur, Netzwerke und Automatisierung."
+    },
     topbar: {
       role: "IT-Systemadministrator · Profil",
       status: "Offen für neue Möglichkeiten"
@@ -259,7 +301,10 @@ Clientes Windows 11
       role2: "Infrastruktur · Netzwerke · Automatisierung",
       summary: "IT-Systemadministrator mit praktischer Erfahrung in Microsoft 365, Windows Server, Active Directory, Netzwerken und Linux-Umgebungen. Fokus auf praxisnahen Projekten und Laborumgebungen, die reale Unternehmens- und Infrastrukturszenarien widerspiegeln.",
       certLabel: "Zertifiziert",
-      websiteDemos: "Website-Demos"
+      websiteDemos: "Website-Demos",
+      ctaLinkedIn: "LinkedIn ansehen",
+      ctaGitHub: "GitHub ansehen",
+      ctaCV: "CV herunterladen"
     },
     quick: {
       focusLabel: "Aktueller Fokus",
@@ -280,6 +325,11 @@ Clientes Windows 11
     projects: {
       title: "Ausgewählte Projekte",
       intro: "Ausgewählte Projekte, die praktische Arbeit in Microsoft 365, Automatisierung, Lösungen für KMU und Unternehmensinfrastruktur zeigen.",
+      status: {
+        code: "Code",
+        live: "Live",
+        lab: "Lab"
+      },
       graph: {
         title: "Microsoft 365 Graph Dashboard",
         desc: "Web-Dashboard zur Demonstration der Integration von Microsoft Graph API mit OAuth-Authentifizierung, Zugriff auf Microsoft-365-Daten und Mehrsprachigkeit.",
@@ -357,6 +407,12 @@ Windows 11 Clients
       3: "Microsoft-365-Automatisierung",
       4: "Infrastruktursicherheit und Betrieb"
     },
+    languages: {
+      title: "Sprachen",
+      es: { name: "Spanisch", level: "Muttersprache" },
+      en: { name: "Englisch", level: "C1 Beruflich" },
+      de: { name: "Deutsch", level: "B2 in Ausbildung" }
+    },
     contact: {
       title: "Kontakt"
     },
@@ -370,7 +426,8 @@ Windows 11 Clients
     },
     common: {
       code: "Code ↗",
-      live: "Live ↗"
+      live: "Live ↗",
+      contactBtn: "Kontakt"
     }
   }
 };
@@ -388,8 +445,19 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     const value = getNestedValue(dict, key);
-    if (value) el.textContent = value;
+    if (value !== undefined) {
+      el.textContent = value;
+    }
   });
+
+  if (dict.meta?.title) {
+    document.title = dict.meta.title;
+  }
+
+  if (dict.meta?.description) {
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) metaDescription.setAttribute('content', dict.meta.description);
+  }
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);

@@ -15,7 +15,6 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -46,6 +45,66 @@ a { color: inherit; }
   z-index: 1;
 }
 
+.lang-switcher {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.lang-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 10px;
+  padding: 6px 8px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: all 0.18s ease;
+}
+
+.lang-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.lang-btn.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.floating-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 10px 14px;
+  background: var(--ink);
+  color: var(--bg);
+  border: 1px solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.floating-contact:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -54,13 +113,6 @@ a { color: inherit; }
   margin-bottom: 44px;
   padding-bottom: 14px;
   border-bottom: 2px solid var(--ink);
-  flex-wrap: wrap;
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -74,7 +126,7 @@ a { color: inherit; }
 .stack-cell-title,
 .architecture-title,
 .timeline-label,
-.lang-btn {
+.project-status {
   font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -84,27 +136,6 @@ a { color: inherit; }
   color: var(--muted);
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-.lang-switcher {
-  display: flex;
-  gap: 6px;
-}
-
-.lang-btn {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--ink-2);
-  font-size: 10px;
-  padding: 6px 8px;
-  cursor: pointer;
-  letter-spacing: 0.1em;
-}
-
-.lang-btn.active {
-  border-color: var(--ink);
-  color: var(--ink);
-  font-weight: 700;
 }
 
 .status-pill {
@@ -136,7 +167,7 @@ a { color: inherit; }
   grid-template-columns: 1.3fr 0.9fr;
   gap: 28px;
   align-items: end;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .hero-name {
@@ -162,6 +193,40 @@ a { color: inherit; }
   max-width: 560px;
   font-size: 15px;
   color: var(--ink-2);
+}
+
+.hero-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 10px 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cta-btn:hover {
+  border-color: var(--ink);
+}
+
+.cta-btn.primary {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.cta-btn.primary:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
 }
 
 .hero-right {
@@ -227,6 +292,23 @@ a { color: inherit; }
 .hero-link:hover,
 .mini-link:hover {
   color: var(--accent-2);
+}
+
+.highlights {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.highlight-pill {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .quick-cards {
@@ -299,7 +381,8 @@ a { color: inherit; }
 .stack-grid,
 .learning-grid,
 .contact-grid,
-.timeline-grid {
+.timeline-grid,
+.languages-grid {
   display: grid;
   gap: 1px;
   background: var(--border);
@@ -310,12 +393,14 @@ a { color: inherit; }
 .stack-grid { grid-template-columns: repeat(4, 1fr); }
 .learning-grid { grid-template-columns: repeat(2, 1fr); }
 .contact-grid { grid-template-columns: repeat(3, 1fr); }
+.languages-grid { grid-template-columns: repeat(3, 1fr); }
 .timeline-grid { grid-template-columns: 1fr; }
 
 .stack-cell,
 .learning-cell,
 .contact-cell,
-.timeline-row {
+.timeline-row,
+.language-card {
   background: var(--surface);
 }
 
@@ -431,6 +516,29 @@ a { color: inherit; }
   align-items: flex-end;
   justify-content: center;
   min-width: 98px;
+}
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+}
+
+.project-status.demo {
+  color: var(--accent-3);
+}
+
+.project-status.live {
+  color: var(--accent-2);
+}
+
+.project-status.lab {
+  color: var(--accent);
 }
 
 .project-link {
@@ -562,7 +670,8 @@ a { color: inherit; }
 }
 
 .learning-cell,
-.contact-cell {
+.contact-cell,
+.language-card {
   padding: 14px 18px;
   font-size: 13px;
   color: var(--ink-2);
@@ -580,6 +689,21 @@ a { color: inherit; }
 
 .learning-cell::before { content: '→'; }
 .contact-cell::before { content: '↗'; }
+
+.language-card {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.language-name {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.language-level {
+  font-size: 12px;
+  color: var(--muted);
+}
 
 .contact-cell a {
   text-decoration: none;
@@ -629,32 +753,53 @@ a { color: inherit; }
 @media (max-width: 860px) {
   .stack-grid,
   .contact-grid,
-  .lab-grid { grid-template-columns: repeat(2, 1fr); }
+  .lab-grid,
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 720px) {
   .hero,
   .project-row,
-  .timeline-row { grid-template-columns: 1fr; }
+  .timeline-row {
+    grid-template-columns: 1fr;
+  }
 
   .hero-right,
   .hero-links,
   .mini-links,
-  .project-links { justify-items: start; align-items: flex-start; }
+  .project-links {
+    justify-items: start;
+    align-items: flex-start;
+  }
 
   .quick-cards,
   .stack-grid,
   .learning-grid,
   .contact-grid,
-  .lab-grid { grid-template-columns: 1fr; }
+  .lab-grid,
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
 
   .project-links {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .topbar-right {
-    width: 100%;
-    justify-content: space-between;
+  .lang-switcher {
+    top: 12px;
+    right: 12px;
+    padding: 6px;
+  }
+
+  .floating-contact {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .container {
+    padding-top: 72px;
   }
 }

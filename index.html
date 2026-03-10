@@ -9,21 +9,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <div class="lang-switcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="de">DE</button>
+  </div>
+
+  <a class="floating-contact" href="https://www.linkedin.com/in/vidalrenao" target="_blank" rel="noreferrer" data-i18n="common.contactBtn">
+    Contact
+  </a>
+
   <div class="container">
     <header class="topbar">
       <span class="topbar-left" data-i18n="topbar.role">IT Systems Administrator · Profile</span>
-
-      <div class="topbar-right">
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="es">ES</button>
-          <button class="lang-btn" data-lang="de">DE</button>
-        </div>
-        <span class="status-pill">
-          <span class="status-dot"></span>
-          <span data-i18n="topbar.status">Open to opportunities</span>
-        </span>
-      </div>
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        <span data-i18n="topbar.status">Open to opportunities</span>
+      </span>
     </header>
 
     <section class="hero">
@@ -38,6 +41,12 @@
           Active Directory, networking and Linux environments. Focused on building practical
           projects and lab environments that reflect real business and enterprise scenarios.
         </p>
+
+        <div class="hero-actions">
+          <a class="cta-btn primary" href="https://www.linkedin.com/in/vidalrenao" target="_blank" rel="noreferrer" data-i18n="hero.ctaLinkedIn">View LinkedIn</a>
+          <a class="cta-btn" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer" data-i18n="hero.ctaGitHub">View GitHub</a>
+          <a class="cta-btn" href="cv/Vidal-Renao-CV.pdf" target="_blank" rel="noreferrer" data-i18n="hero.ctaCV">Download CV</a>
+        </div>
       </div>
 
       <div class="hero-right">
@@ -51,6 +60,17 @@
           <a class="hero-link" href="https://github.com/vidal-renao" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
+    </section>
+
+    <section class="highlights">
+      <div class="highlight-pill">CCNA</div>
+      <div class="highlight-pill">Microsoft 365</div>
+      <div class="highlight-pill">Entra ID</div>
+      <div class="highlight-pill">Windows Server</div>
+      <div class="highlight-pill">Active Directory</div>
+      <div class="highlight-pill">PowerShell</div>
+      <div class="highlight-pill">Linux</div>
+      <div class="highlight-pill">Networking</div>
     </section>
 
     <section class="quick-cards">
@@ -149,6 +169,7 @@
             </div>
           </div>
           <div class="project-links">
+            <span class="project-status live" data-i18n="projects.status.code">Code</span>
             <a class="project-link code" href="https://github.com/vidal-renao/m365-graph-dashboard" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
           </div>
         </article>
@@ -169,6 +190,7 @@
             </div>
           </div>
           <div class="project-links">
+            <span class="project-status live" data-i18n="projects.status.code">Code</span>
             <a class="project-link code" href="https://github.com/vidal-renao/graph-employee-onboarding" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
           </div>
         </article>
@@ -188,6 +210,7 @@
             </div>
           </div>
           <div class="project-links">
+            <span class="project-status demo" data-i18n="projects.status.live">Live</span>
             <a class="project-link code" href="https://github.com/vidal-renao/website-demos" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
             <a class="project-link" href="https://vidal-renao.github.io/website-demos/" target="_blank" rel="noreferrer" data-i18n="common.live">Live ↗</a>
           </div>
@@ -209,6 +232,7 @@
             </div>
           </div>
           <div class="project-links">
+            <span class="project-status lab" data-i18n="projects.status.lab">Lab</span>
             <a class="project-link code" href="https://github.com/vidal-renao/m365-enterprise-lab" target="_blank" rel="noreferrer" data-i18n="common.code">Code ↗</a>
           </div>
         </article>
@@ -316,6 +340,27 @@ Windows 11 Clients
     <section class="section">
       <div class="section-header">
         <span class="section-num">07</span>
+        <h2 class="section-title" data-i18n="languages.title">Languages</h2>
+      </div>
+      <div class="languages-grid">
+        <div class="language-card">
+          <div class="language-name" data-i18n="languages.es.name">Spanish</div>
+          <div class="language-level" data-i18n="languages.es.level">Native</div>
+        </div>
+        <div class="language-card">
+          <div class="language-name" data-i18n="languages.en.name">English</div>
+          <div class="language-level" data-i18n="languages.en.level">C1 Professional</div>
+        </div>
+        <div class="language-card">
+          <div class="language-name" data-i18n="languages.de.name">German</div>
+          <div class="language-level" data-i18n="languages.de.level">B2 in training</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-num">08</span>
         <h2 class="section-title" data-i18n="contact.title">Contact</h2>
       </div>
       <div class="contact-grid">
