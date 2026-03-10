@@ -69,6 +69,7 @@ a { color: inherit; }
   cursor: pointer;
   letter-spacing: 0.1em;
   transition: all 0.18s ease;
+  transition: all 0.2s ease;
 }
 
 .lang-btn:hover {
@@ -81,6 +82,7 @@ a { color: inherit; }
   background: var(--ink);
   color: var(--bg);
   font-weight: 700;
+  transition: all 0.2s ease;
 }
 
 .floating-contact {
@@ -801,5 +803,21 @@ a { color: inherit; }
 
   .container {
     padding-top: 72px;
+  }
+}
+
+/* Animation */
+.container {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
